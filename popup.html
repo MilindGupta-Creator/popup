@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoSoft</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        /* Custom styles */
+        .popup-container {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .popup-content {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        .popup-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333333;
+        }
+        .popup-message {
+            font-size: 1rem;
+            color: #555555;
+            line-height: 1.5;
+        }
+        .popup-link {
+            color: #1a9cfc;
+            text-decoration: underline;
+        }
+        .popup-close-btn {
+            background-color: #1a9cfc;
+            color: #ffffff;
+            border: none;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .popup-close-btn:hover {
+            background-color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed inset-0 flex items-center justify-center z-50 popup-container">
+        <div class="popup-content p-6 rounded-md text-center">
+            <h1 class="popup-title mb-4">Website Moved</h1>
+            <p class="popup-message">
+                The website has been moved to <a href="https://geosoftglobal.com" class="popup-link">geosoftglobal.com</a>.
+               <br> Don't worry, you'll be redirected to the new site shortly. 
+            </p>
+            <button class="popup-close-btn mt-6" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function closePopup() {
+            window.location.href = 'https://geosoftglobal.com';
+            document.querySelector('.popup-container').style.display = 'none';
+        }
+        
+        setTimeout(function() {
+            window.location.href = 'https://geosoftglobal.com';
+        }, 5000);
+    </script>
+</body>
+</html>
